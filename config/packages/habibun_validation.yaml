@@ -1,0 +1,3 @@
+habibun_validation:
+  config_boolean: true
+  config_integer: 2

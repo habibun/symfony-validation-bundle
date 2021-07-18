@@ -11,4 +11,5 @@
 
 ###> miscellaneous ###
 /.idea
+/.php-cs-fixer.cache
 ###< miscellaneous ###

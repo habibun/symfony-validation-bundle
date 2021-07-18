@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="habibun_validation.validator" class="Habibun\ValidationBundle\Validator" public="true" />
+        <service alias="habibun_validation.validator" id="Habibun\ValidationBundle\Validator" public="true"/>
+    </services>
+</container>
