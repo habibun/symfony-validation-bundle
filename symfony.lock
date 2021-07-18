@@ -17,6 +17,9 @@
     "doctrine/lexer": {
         "version": "1.2.1"
     },
+    "habibun/validation-bundle": {
+        "version": "dev-master"
+    },
     "monolog/monolog": {
         "version": "1.26.1"
     },

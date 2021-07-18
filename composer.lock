@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67019fcc493ce686bbec62c97f869053",
+    "content-hash": "0d8d240aa9137ee0336565027850fff6",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -157,6 +157,37 @@
                 }
             ],
             "time": "2020-05-25T17:44:05+00:00"
+        },
+        {
+            "name": "habibun/validation-bundle",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../validation-bundle",
+                "reference": "37423c26a713ce57e52e72e1e8353b8f1b19fd35"
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Habibun\\ValidationBundle\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Habibun Noby",
+                    "email": "habibun.noby@gmail.com"
+                }
+            ],
+            "description": "Integration bundle for Respect\\Validation in Symfony",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "psr/cache",
@@ -3857,7 +3888,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "habibun/validation-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
