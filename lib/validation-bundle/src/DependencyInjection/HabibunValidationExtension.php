@@ -26,7 +26,7 @@ class HabibunValidationExtension extends Extension
 
         $definition = $container->getDefinition('habibun_validation.validator');
         if (null !== $config['rule_provider']) {
-            $definition->setArgument(0, new Reference($config['rule_provider']));
+            $container->setAlias('habibun_validation.rule_provider', $config['rule_provider']);
         }
 
         $definition->setArgument(1, $config['config_boolean']);

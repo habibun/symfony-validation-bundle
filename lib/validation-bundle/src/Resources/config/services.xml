@@ -8,7 +8,9 @@
         <service id="habibun_validation.validator" class="Habibun\ValidationBundle\Validator">
             <argument type="service" id="habibun_validation.rule_provider"/>
         </service>
-        <service id="habibun_validation.rule_provider" class="Habibun\ValidationBundle\RuleProvider"/>
         <service alias="habibun_validation.validator" id="Habibun\ValidationBundle\Validator"/>
+
+        <service id="habibun_validation.rule_provider" class="Habibun\ValidationBundle\RuleProvider"/>
+        <service alias="habibun_validation.rule_provider" id="Habibun\ValidationBundle\RuleProvider"/>
     </services>
 </container>

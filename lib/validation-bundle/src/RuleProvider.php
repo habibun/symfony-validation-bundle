@@ -2,9 +2,9 @@
 
 namespace Habibun\ValidationBundle;
 
-class RuleProvider
+class RuleProvider implements RuleProviderInterface
 {
-    public function getRules()
+    public function getRules(): array
     {
         return [
             'rule_1' => 'rule_1',

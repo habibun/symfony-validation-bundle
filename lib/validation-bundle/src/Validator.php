@@ -20,7 +20,7 @@ class Validator
     /**
      * Validator constructor.
      */
-    public function __construct(RuleProvider $rule, $configBoolean = false, $configInteger = 0)
+    public function __construct(RuleProviderInterface $rule, $configBoolean = false, $configInteger = 0)
     {
         $this->rule = $rule;
         $this->configBoolean = $configBoolean;
