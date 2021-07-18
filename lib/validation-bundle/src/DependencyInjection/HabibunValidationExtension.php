@@ -2,11 +2,15 @@
 
 namespace Habibun\ValidationBundle\DependencyInjection;
 
+use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\Config\FileLocator;
 
+/**
+ * Class HabibunValidationExtension.
+ */
 class HabibunValidationExtension extends Extension
 {
     /**
@@ -14,8 +18,6 @@ class HabibunValidationExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-//        dd($configs);
-
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
@@ -23,8 +25,11 @@ class HabibunValidationExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $definition = $container->getDefinition('habibun_validation.validator');
-        $definition->setArgument(0, $config['config_boolean']);
-        $definition->setArgument(0, $config['config_integer']);
+        if (null !== $config['rule_provider']) {
+            $definition->setArgument(0, new Reference($config['rule_provider']));
+        }
 
+        $definition->setArgument(1, $config['config_boolean']);
+        $definition->setArgument(2, $config['config_integer']);
     }
 }

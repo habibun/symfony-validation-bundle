@@ -1,3 +1,4 @@
 habibun_validation:
   config_boolean: true
   config_integer: 2
+  rule_provider: App\Service\MyRuleProvider
